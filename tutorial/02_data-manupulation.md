@@ -1,4 +1,4 @@
-### Loading data
+# Loading data
 It is Asynchronous, requires a server and automatically parsed.
   * d3.csv(dataUrl).then(callback).catch(errorHandler)
   * d3.json(dataUrl).then(callback).catch(errorHandler)

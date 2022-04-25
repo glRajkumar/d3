@@ -1,4 +1,4 @@
-# selections in d3
+# Selections in d3
   * select - Selects only first DOM element by matching the given CSS selector.
   * selectAll - Selects all DOM elements by matching the given CSS selector.
 
