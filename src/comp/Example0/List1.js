@@ -5,32 +5,39 @@ import people from '../../dataStore/people';
 
 function List1() {
   useEffect(() => {
-    d3.select("#example0-list-tbody")
+    let container = d3.select("#example0-list-tbody")
       .selectAll("tr")
-      .data(people)
+
+    container.data(people)
       .enter()
       .append("tr")
       .html(d => `
-        <td>${d.name}</td>
-        <td>${d.age}</td>
-        <td>${d.favCharacter.join(", ")}</td>
+        <td><p>${d.name}</p></td>
+        <td><p>${d.age}</p></td>
+        <td><p>${d.favCharacter.join(", ")}</p></td>
       `)
+
+    container.attr("class", "border")
+    container.selectAll("p").attr("class", "px-4 py-2")
   }, [])
 
   return (
     <div>
       <h1 className='text-3xl font-semibold mb-4'>List - 0</h1>
-      <table className='w-full table-fixed'>
-        <thead>
-          <tr>
-            <th className='w-40 text-left'>Name</th>
-            <th className='w-10 text-left'>Age</th>
-            <th className='text-left'>Favourite Character in Marvel</th>
-          </tr>
-        </thead>
 
-        <tbody id='example0-list-tbody'></tbody>
-      </table>
+      <div className='relative max-h-96 overflow-y-scroll'>
+        <table className='table-fixed border mx-auto'>
+          <thead>
+            <tr className='sticky top-0 bg-white'>
+              <th className='w-40 text-left'><p className='px-4 py-2 border-y'>Name</p></th>
+              <th className='w-10 text-left'><p className='px-4 py-2 border-y'>Age</p></th>
+              <th className='text-left'><p className='px-4 py-2 border-y'>Favourite Character in Marvel</p></th>
+            </tr>
+          </thead>
+
+          <tbody id='example0-list-tbody'></tbody>
+        </table>
+      </div>
     </div>
   )
 }
