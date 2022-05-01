@@ -23,7 +23,7 @@ function List1() {
 
   return (
     <div>
-      <h1 className='text-3xl font-semibold mb-4'>List - 0</h1>
+      <h1 className='text-3xl font-semibold mt-8 mb-4'>List - 0</h1>
 
       <div className='relative max-h-96 overflow-y-scroll'>
         <table className='table-fixed border mx-auto'>
