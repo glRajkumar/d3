@@ -17,4 +17,5 @@ ex: d3.sum(data, v => v.cost)
 
 
 ### Binding data
-  * selection.data(data, ?key)
+  * selection.data(data, ?key) - for multiple data
+  * selection.datam(data) - for single data
