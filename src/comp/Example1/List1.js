@@ -44,7 +44,6 @@ function List1() {
       top: 35
     }
 
-    // const elDimentions = document.getElementById("exmpe1-list1-svg0").getBoundingClientRect()
     const sortedData = priceData.sort((a, b) => a.year < b.year ? 1 : -1)
 
     const scale = getScales(sortedData, config)
