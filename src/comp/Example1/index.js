@@ -3,6 +3,7 @@ import BarChart from './BarChart';
 import List0 from './List0';
 import List1 from './List1';
 import List2 from './List2';
+import List3 from './List3';
 
 function Example1() {
   return (
@@ -20,6 +21,11 @@ function Example1() {
       <div className='mb-6'>
         <h1 className="mb-4 text-3xl font-bold">List 2</h1>
         <List2 />
+      </div>
+
+      <div className='mb-6'>
+        <h1 className="mb-4 text-3xl font-bold">List 3</h1>
+        <List3 />
       </div>
 
       <div>
