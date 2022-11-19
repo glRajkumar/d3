@@ -9,6 +9,10 @@ const links = [
     path: "/example1",
     title: "Example1"
   },
+  {
+    path: "/example2",
+    title: "Example2"
+  },
 ]
 
 function Home() {
