@@ -35,13 +35,14 @@ const links = [
 function Networks() {
   useEffect(() => {
     showData()
+    // eslint-disable-next-line
   }, [])
 
   function showData() {
     const width = 400
     const height = 400
 
-    createElements(data)
+    createElements()
 
     const forceLink = d3.forceLink().id(d => d.id)
     const forceCharge = d3.forceManyBody()
@@ -53,22 +54,23 @@ function Networks() {
       .force('center', forceCenter)
 
     simulation.nodes(nodes).on("tick", updateElements)
-    simulation.force("links").links(links)
+    simulation.force("link").links(links)
   }
 
-  function createElements(data) {
-    const body = document.getElementById('')
+  function createElements() {
+    const body = d3.select('#exmpe2-list0')
+
     body.append("g")
       .attr("class", "links")
       .selectAll("line")
-      .data(data.links)
+      .data(links)
       .enter()
       .append("line")
 
     body.append("g")
       .attr("class", "nodes")
       .selectAll("circle")
-      .data(data.nodes)
+      .data(nodes)
       .enter()
       .append("circle")
       .attr("r", 5)
@@ -91,7 +93,7 @@ function Networks() {
 
   return (
     <div>
-      <svg id="exmpe2-list0"></svg>
+      <svg id="exmpe2-list0" className="w-[400px] h-[400px]"></svg>
     </div>
   )
 }
