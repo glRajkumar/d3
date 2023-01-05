@@ -1,4 +1,4 @@
-Knowledge fromInformation Visualizayion (part 3) coursera course
+Knowledge from Information Visualizayion (part 3) coursera course
 
 ### In general to visualize, we use following steps
   1) Transform data (ex. d3.cross, d3.max)
