@@ -94,7 +94,7 @@ function Networks() {
 
   return (
     <div>
-      <svg id="exmpe2-list0" className="w-[400px] h-[400px]"></svg>
+      <svg id="exmpe2-list0" className="w-[400px] h-[400px] border border-slate-300"></svg>
     </div>
   )
 }
