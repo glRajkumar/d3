@@ -9,3 +9,5 @@ Determine layouts and networks in d3.
 
   * d3.forceLink(links)
       .id(fn)
+
+  * d3.forceManyBody()

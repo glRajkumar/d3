@@ -66,6 +66,7 @@ function Networks() {
       .data(links)
       .enter()
       .append("line")
+      .attr("stroke", "black")
 
     body.append("g")
       .attr("class", "nodes")
